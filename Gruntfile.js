@@ -15,11 +15,15 @@ module.exports = function (grunt) {
             'dist/index.css': 'index.css'
         },
         uglify: {
-            'dist/index.js': 'index.js'
+            release:{
+                files: {
+                  'dist/index.js': 'index.js',
+                }
+              }
         }
     })
     grunt.loadNpmTasks('grunt-contrib-htmlmin')
     grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-uglify')
-    grunt.registerTask('default', ['htmlmin', 'cssmin', 'uglify'])
+    grunt.registerTask('minify', ['htmlmin', 'cssmin', 'uglify'])
 }
