@@ -33,8 +33,7 @@ $(function() {
             $names.html('');
             isname=true;
         }
-    })
-
+    });
     $psw.blur(function(){   
         if(!$psw.val()){
             $psws.html("密码不能为空")  
@@ -46,7 +45,7 @@ $(function() {
             $psws.html('');
             ispsw=true;
         }
-    })
+    });
 
     $phone.blur(()=>{
         if(!$phone.val()){
@@ -85,7 +84,7 @@ $(function() {
             $nums.html('');
             isnum = true;
         }
-    })
+    });
 
     $button.click(()=>{
         if(! (isname && ispsw && isphone && isnum)){
