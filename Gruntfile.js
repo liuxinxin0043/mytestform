@@ -12,10 +12,14 @@ module.exports = function (grunt) {
             }
         },
         cssmin: {
-            'dist/loginfrom.css': 'loginfrom.css'
+            'dist/loginform.css': 'loginform.css'
         },
         uglify: {
-            'dist/loginfrom.js': 'loginfrom.js'
+            release:{
+                files: {
+                  'dist/loginform.js': 'loginform.js'
+                }
+              }  
         }
     })
     grunt.loadNpmTasks('grunt-contrib-htmlmin')
