@@ -25,5 +25,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin')
     grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-uglify')
-    grunt.registerTask('release', ['htmlmin', 'cssmin', 'uglify'])
+    grunt.registerTask('release', ['copy','htmlmin', 'cssmin', 'uglify'])
 }
