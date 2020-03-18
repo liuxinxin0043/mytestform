@@ -6,24 +6,20 @@ module.exports = function (grunt) {
                 collapseWhitespace: true
             },
             files: {
-                src: 'dist/index.html',
+                src: './index.html',
                 dest: 'dist/index.html'
 
             }
         },
         cssmin: {
-            'dist/loginform.css': 'loginform.css'
+            'dist/index.css': 'index.css'
         },
         uglify: {
-            release:{
-                files: {
-                  'dist/loginform.js': 'loginform.js'
-                }
-              }  
+            'dist/index.js': 'index.js'
         }
     })
     grunt.loadNpmTasks('grunt-contrib-htmlmin')
     grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-uglify')
-    grunt.registerTask('release', ['copy','htmlmin', 'cssmin', 'uglify'])
+    grunt.registerTask('default', ['htmlmin', 'cssmin', 'uglify'])
 }
